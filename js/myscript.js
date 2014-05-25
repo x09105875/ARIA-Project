@@ -51,7 +51,7 @@ $(document).ready(function(){
 	});	
 	
 	//Flickr Integration
-    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=36334875@N04&lang=en-us&format=json&jsoncallback=?", function(data){
+    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=99148474@N03&lang=en-us&format=json&jsoncallback=?", function(data){
 		$.each(data.items, function(i,item){
 			if(i<=11){ // <— change this number to display more or less images
 				$("<img/>").attr("src", item.media.m.replace('_m', '_s')).appendTo(".FlickrImages ul")
