@@ -90,11 +90,17 @@
 						  
 						  
 
-							<!-- Status results div -->
+							<!-- Stats results div -->
 							<div id="statsfc-results"></div>
 
+							<!-- Stats live games -->
+							<div id="statsfc-live"></div>
 
-
+							<!-- Stats fixtures -->
+							<div id="statsfc-fixtures"></div>
+							
+							
+							
 						  
                         </div>
                         <div class="span4">
@@ -215,7 +221,7 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 		
-		<!-- Stats script -->
+		<!-- Stats Results script -->
 		<script>
 			var results = new StatsFC_Results('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
 			results.competition = 'EPL';
@@ -224,6 +230,24 @@
 			results.showBadges = true;
 			results.highlight = 'Liverpool';
 			results.display('statsfc-results');
-		</script>	
+		</script>
+
+<script>
+    var live = new StatsFC_Live('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
+    live.competition = 'EPL';
+    live.showBadges = true;
+    live.display('statsfc-live');
+</script>
+
+<script>
+    var fixtures = new StatsFC_Fixtures('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
+    fixtures.competition = 'EPL';
+    fixtures.showBadges = true;
+    fixtures.to = 'next Monday + 1 week';
+    fixtures.display('statsfc-fixtures');
+</script>
+
+
+		
     </body>
 </html>
