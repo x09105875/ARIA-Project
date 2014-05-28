@@ -101,8 +101,7 @@
 
 							
 
-							<!-- Stats EPL fixtures -->
-							<div id="statsfc-fixtures"></div>
+							
 							
 							
 							
@@ -136,8 +135,8 @@
 						</div>
 						<div class="span4">
                             <h2 class="title"><span>LFC Next Matches</span></h2>
-							<!-- Stats EPL results -->
-							<div id="statsfc-results"></div>
+							<!-- Stats EPL fixtures -->
+							<div id="statsfc-fixtures"></div>
 						</div>                                                
                     </div>
                 </section>
@@ -287,7 +286,7 @@
     var topScorers = new StatsFC_TopScorers('API_KEY');
     topScorers.competition = 'EPL';
 	topScorers.limit = 16;
-	topScorers..highlight = 'Liverpool';
+	topScorers.highlight = 'Liverpool';
     topScorers.showBadges = true;
     topScorers.display('statsfc-top-scorers');
 </script>
