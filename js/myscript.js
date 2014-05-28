@@ -79,7 +79,7 @@ $(document).ready(function(){
 			$(".preloader").css({'background':'none'});
 		}
 	);						
-});	
+
 
 	
 //Stats Results script
@@ -134,3 +134,5 @@ $(document).ready(function(){
 	topScorers.highlight = 'Liverpool';
     topScorers.showBadges = true;
     topScorers.display('statsfc-top-scorers');
+
+});	
