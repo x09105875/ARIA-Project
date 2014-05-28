@@ -110,6 +110,9 @@
                         <div class="span4">
                             <h2 class="title"><span>Section 3</span></h2>
                         	
+							<div id="statsfc-table"></div>
+							
+							
                         </div>                        
                     </div>
                 </section>
@@ -247,7 +250,15 @@
     fixtures.display('statsfc-fixtures');
 </script>
 
-
+<script>
+    var table = new StatsFC_Table('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
+    table.competition = 'EPL';
+    table.tableType = 'full';
+	table.highlight = 'Liverpool';
+    table.showBadges = true;
+    table.showForm = true;
+    table.display('statsfc-table');
+</script>
 		
     </body>
 </html>
