@@ -95,7 +95,7 @@ $(document).ready(function(){
 
 
 //Stats Fixtures script
-<script>
+
     var fixtures = new StatsFC_Fixtures('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     fixtures.competition = 'EPL';
 	fixtures.team = 'Liverpool';
@@ -103,10 +103,10 @@ $(document).ready(function(){
     fixtures.to = 'next Monday + 8 week';
 	fixtures.highlight = 'Liverpool';
     fixtures.display('statsfc-fixtures');
-</script>
+
 
 //Stats League Table script
-<script>
+
     var table = new StatsFC_Table('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     table.competition = 'EPL';
     table.tableType = 'full';
@@ -114,24 +114,23 @@ $(document).ready(function(){
     table.showBadges = true;
     //table.showForm = true;
     table.display('statsfc-table');
-</script>
+
 
 //Stats Team Form script
-<script>
+
     var form = new StatsFC_Form('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     form.competition = 'EPL';
 	form.highlight = 'Liverpool';
     form.showBadges = true;
     form.showScore = true;
     form.display('statsfc-form');
-</script>
+
 
 //Stats Top Scorers
-<script>
+
     var topScorers = new StatsFC_TopScorers('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     topScorers.competition = 'EPL';
 	topScorers.limit = 10;
 	topScorers.highlight = 'Liverpool';
     topScorers.showBadges = true;
     topScorers.display('statsfc-top-scorers');
-</script>
