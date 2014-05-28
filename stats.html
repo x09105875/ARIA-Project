@@ -94,39 +94,18 @@
                     <div class="row">
                         <div class="span6">
                             <h2 class="title"><span>Barclays Premier League - League Table</span></h2>
-                          
 							<!-- Stats EPL table -->
 							<div id="statsfc-table"></div>
-						  
-
-							
-
-							
-
-							
-							
-							
-							
-						  
                         </div>
                         <div class="span6">
-                            <h2 class="title"><span>Barclays Premier League - Team Form - Last 5 Matches</span></h2>
-							<div id="statsfc-form"></div>
-							
-							
-                        <!--	
-                        </div>
-                        <div class="span4">
-                            <h2 class="title"><span>Section 3</span></h2> 
-							-->
-                        						
-							
+                            <h2 class="title"><span>BPL - Team Form - Last 5 Matches</span></h2>
+							<div id="statsfc-form"></div>							
                         </div>                        
                     </div>
                 </section>
             </div>
         </div>
-		
+		<hr />
 		<div class="wrap">
         	<div class="container">
                 <section>
@@ -146,21 +125,14 @@
 							<!-- Stats EPL fixtures -->
 							<div id="statsfc-top-scorers"></div>
 						</div>            						
-						
                     </div>
                 </section>
             </div>
         </div>
-		
     </div>
     <!--//page_container-->
 	
 	
-	
-	
-	
-
-
 	 <!--footer-->
     <div id="footer">
     	<div class="wrap">
@@ -190,12 +162,7 @@
         	</div>            
         </div>
         
-		
-		
-		
-		
-		
-		
+				
         <div class="footer_bottom">
             <div class="wrap">
             	<div class="container">
@@ -263,7 +230,7 @@
 			var results = new StatsFC_Results('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
 			results.competition = 'EPL';
 			results.team = 'Liverpool';
-			results.from = '-8 weeks';
+			results.from = '-10 weeks';
 			results.showBadges = true;
 			results.highlight = 'Liverpool';
 			results.display('statsfc-results');
@@ -292,7 +259,7 @@
 </script>
 
 <script>
-    var form = new StatsFC_Form('API_KEY');
+    var form = new StatsFC_Form('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     form.competition = 'EPL';
 	form.highlight = 'Liverpool';
     form.showBadges = true;
@@ -303,7 +270,7 @@
 <script>
     var topScorers = new StatsFC_TopScorers('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     topScorers.competition = 'EPL';
-	topScorers.limit = 12;
+	topScorers.limit = 10;
 	topScorers.highlight = 'Liverpool';
     topScorers.showBadges = true;
     topScorers.display('statsfc-top-scorers');
