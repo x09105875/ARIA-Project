@@ -34,6 +34,8 @@
 		<script src="//api.statsfc.com/widget/fixtures-2.0.min.js"></script>
 		<link rel="stylesheet" href="//api.statsfc.com/widget/table.css">
 		<script src="//api.statsfc.com/widget/table-2.0.min.js"></script>
+		<link rel="stylesheet" href="//api.statsfc.com/widget/form.css">
+		<script src="//api.statsfc.com/widget/form-2.0.min.js"></script>
 
     </head>
     <body>
@@ -108,8 +110,9 @@
 						  
                         </div>
                         <div class="span6">
-                            <h2 class="title"><span>Barclays Premier League - Top Scorers</span></h2>
-							<div id="statsfc-top-scorers"></div>
+                            <h2 class="title"><span>Barclays Premier League - Team Form - Last 5 Matches</span></h2>
+							<div id="statsfc-form"></div>
+							
 							
                         <!--	
                         </div>
@@ -129,15 +132,21 @@
                 <section>
                     <div class="row">
                         <div class="span4">
-                            <h2 class="title"><span>LFC Previous Results</span></h2>
+                            <h2 class="title"><span>LFC - Previous Results</span></h2>
 							<!-- Stats EPL results -->
 							<div id="statsfc-results"></div>
 						</div>
 						<div class="span4">
-                            <h2 class="title"><span>LFC Next Matches</span></h2>
+                            <h2 class="title"><span>LFC - Upcoming Fixtures</span></h2>
 							<!-- Stats EPL fixtures -->
 							<div id="statsfc-fixtures"></div>
-						</div>                                                
+						</div>        
+						<div class="span4">
+                            <h2 class="title"><span>BPL - Top Scorers</span></h2>
+							<!-- Stats EPL fixtures -->
+							<div id="statsfc-top-scorers"></div>
+						</div>            						
+						
                     </div>
                 </section>
             </div>
@@ -278,14 +287,23 @@
     table.tableType = 'full';
 	table.highlight = 'Liverpool';
     table.showBadges = true;
-    table.showForm = true;
+    //table.showForm = true;
     table.display('statsfc-table');
 </script>
 
 <script>
-    var topScorers = new StatsFC_TopScorers('API_KEY');
+    var form = new StatsFC_Form('API_KEY');
+    form.competition = 'EPL';
+	form.highlight = 'Liverpool';
+    form.showBadges = true;
+    form.showScore = true;
+    form.display('statsfc-form');
+</script>
+
+<script>
+    var topScorers = new StatsFC_TopScorers('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     topScorers.competition = 'EPL';
-	topScorers.limit = 16;
+	topScorers.limit = 12;
 	topScorers.highlight = 'Liverpool';
     topScorers.showBadges = true;
     topScorers.display('statsfc-top-scorers');
