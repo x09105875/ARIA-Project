@@ -96,27 +96,30 @@
 						  
 						  
 
-							<!-- Stats results div -->
+							<!-- Stats EPL results -->
 							<div id="statsfc-results"></div>
 
-							<!-- Stats live games -->
-							<div id="statsfc-live">Note: There are no live games at this time as the season has ended</div>
+							<!-- Stats EPL live games -->
+							<div id="statsfc-live"></div>
 
-							<!-- Stats fixtures -->
-							<div id="statsfc-fixtures">Note: There are no upcoming fixtures at this as the season has ended</div>
+							<!-- Stats EPL fixtures -->
+							<div id="statsfc-fixtures"></div>
 							
 							
 							
 						  
                         </div>
                         <div class="span4">
-                            <h2 class="title"><span>Section 2</span></h2>
+                            <h2 class="title"><span>Barclays Premier League Table</span></h2>
+							<!-- Stats EPL table -->
+							<div id="statsfc-table"></div>
                         	
                         </div>
                         <div class="span4">
                             <h2 class="title"><span>Section 3</span></h2>
                         	
-							<div id="statsfc-table"></div>
+							
+							
 							
 							
                         </div>                        
@@ -259,10 +262,10 @@
 <script>
     var table = new StatsFC_Table('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     table.competition = 'EPL';
-    table.tableType = 'full';
+    table.tableType = 'mini';
 	table.highlight = 'Liverpool';
     table.showBadges = true;
-    table.showForm = true;
+    //table.showForm = true;
     table.display('statsfc-table');
 </script>
 		
