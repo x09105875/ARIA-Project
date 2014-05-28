@@ -28,8 +28,8 @@
 		<script src="//code.jquery.com/jquery-latest.min.js"></script>
 		<link rel="stylesheet" href="//api.statsfc.com/widget/results.css">
 		<script src="//api.statsfc.com/widget/results-2.0.min.js"></script>
-		<link rel="stylesheet" href="//api.statsfc.com/widget/live.css">
-		<script src="//api.statsfc.com/widget/live-2.0.min.js"></script>
+		<link rel="stylesheet" href="//api.statsfc.com/widget/top-scorers.css">
+		<script src="//api.statsfc.com/widget/top-scorers-2.0.min.js"></script>
 		<link rel="stylesheet" href="//api.statsfc.com/widget/fixtures.css">
 		<script src="//api.statsfc.com/widget/fixtures-2.0.min.js"></script>
 		<link rel="stylesheet" href="//api.statsfc.com/widget/table.css">
@@ -90,17 +90,16 @@
         	<div class="container">
                 <section>
                     <div class="row">
-                        <div class="span4">
-                            <h2 class="title"><span>Section 1</span></h2>
+                        <div class="span6">
+                            <h2 class="title"><span>Barclays Premier League - League Table</span></h2>
                           
-						  
+							<!-- Stats EPL table -->
+							<div id="statsfc-table"></div>
 						  
 
-							<!-- Stats EPL results -->
-							<div id="statsfc-results"></div>
+							
 
-							<!-- Stats EPL live games -->
-							<div id="statsfc-live"></div>
+							
 
 							<!-- Stats EPL fixtures -->
 							<div id="statsfc-fixtures"></div>
@@ -109,24 +108,42 @@
 							
 						  
                         </div>
-                        <div class="span4">
-                            <h2 class="title"><span>Barclays Premier League Table</span></h2>
-							<!-- Stats EPL table -->
-							<div id="statsfc-table"></div>
-                        	
+                        <div class="span6">
+                            <h2 class="title"><span>Barclays Premier League - Top Scorers</span></h2>
+							<div id="statsfc-top-scorers"></div>
+							
+                        <!--	
                         </div>
                         <div class="span4">
-                            <h2 class="title"><span>Section 3</span></h2>
-                        	
-							
-							
-							
+                            <h2 class="title"><span>Section 3</span></h2> 
+							-->
+                        						
 							
                         </div>                        
                     </div>
                 </section>
             </div>
         </div>
+		
+		<div class="wrap">
+        	<div class="container">
+                <section>
+                    <div class="row">
+                        <div class="span4">
+                            <h2 class="title"><span>LFC Previous Results</span></h2>
+							<!-- Stats EPL results -->
+							<div id="statsfc-results"></div>
+						</div>
+						<div class="span4">
+                            <h2 class="title"><span>LFC Next Matches</span></h2>
+							<!-- Stats EPL results -->
+							<div id="statsfc-results"></div>
+						</div>                                                
+                    </div>
+                </section>
+            </div>
+        </div>
+		
     </div>
     <!--//page_container-->
 	
@@ -244,29 +261,35 @@
 			results.display('statsfc-results');
 		</script>
 
-<script>
-    var live = new StatsFC_Live('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
-    live.competition = 'EPL';
-    live.showBadges = true;
-    live.display('statsfc-live');
-</script>
+
 
 <script>
     var fixtures = new StatsFC_Fixtures('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     fixtures.competition = 'EPL';
+	fixtures.team = 'Liverpool';
     fixtures.showBadges = true;
-    fixtures.to = 'next Monday + 1 week';
+    fixtures.to = 'next Monday + 8 week';
+	fixtures.highlight = 'Liverpool';
     fixtures.display('statsfc-fixtures');
 </script>
 
 <script>
     var table = new StatsFC_Table('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
     table.competition = 'EPL';
-    table.tableType = 'mini';
+    table.tableType = 'full';
 	table.highlight = 'Liverpool';
     table.showBadges = true;
-    //table.showForm = true;
+    table.showForm = true;
     table.display('statsfc-table');
+</script>
+
+<script>
+    var topScorers = new StatsFC_TopScorers('API_KEY');
+    topScorers.competition = 'EPL';
+	topScorers.limit = 16;
+	topScorers..highlight = 'Liverpool';
+    topScorers.showBadges = true;
+    topScorers.display('statsfc-top-scorers');
 </script>
 		
     </body>
