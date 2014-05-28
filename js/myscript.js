@@ -82,8 +82,8 @@ $(document).ready(function(){
 });	
 
 	
-<!-- Stats Results script -->
-		<script>
+//Stats Results script
+		
 			var results = new StatsFC_Results('afiq5mPwsNk9BK9Veqll37TOBumlSifkVbEW_mN6');
 			results.competition = 'EPL';
 			results.team = 'Liverpool';
@@ -91,7 +91,7 @@ $(document).ready(function(){
 			results.showBadges = true;
 			results.highlight = 'Liverpool';
 			results.display('statsfc-results');
-		</script>
+		
 
 
 //Stats Fixtures script
